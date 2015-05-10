@@ -1,0 +1,21 @@
+<aventure xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<page numero_page="1">
+	<titre>Bienvenue !</titre>
+	<description_page>Devant vous se trouvent deux portes closes. Il n'y a pas d'autres chemins, vous devez choisir l'une d'entre elle.
+La première a un ange griffoné sur la poignée, la seconde n'a rien de distinctif.</description_page>
+	<choix id_choix="1">
+		<description_choix>Prendre la porte avec l'ange gravé sur la poignée</description_choix>
+		<page_suivante><condition niveau="8" attribut="INT" texte_reussite="Votre coup d'oeil vous permet de voir que l'ange pointe l'autre porte, vous changez donc d'avis."><condition niveau="8" attribut="FOR">2</condition>2</condition>3</page_suivante></choix>
+			
+	<choix id_choix="2">
+		<description_choix>Prendre la porte banale</description_choix>
+		<page_suivante>2</page_suivante></choix></page>
+			
+	<page numero_page="2">
+	<titre>Victoire</titre>
+	<description_page>Vous avez fini mon jeu, bravo ! :)</description_page></page>
+			
+	<page numero_page="3">
+	<titre>Perdu</titre>
+	<description_page>Vous êtes mort d'une longue agonie... Dezdez :(</description_page></page>
+</aventure>

@@ -16,6 +16,8 @@ public class Personnage extends Creature {
 	 */
 	public Personnage(String nom) {
 		this.m_nom = nom;
+		De dé = new De();
+		this.defStats(dé.roll()+dé.roll(), (5+dé.roll()+dé.roll()), (5+dé.roll()+dé.roll()), dé.roll());
 	}//TODO : assignement des caractérisitiques (Tiona)
 	
 	

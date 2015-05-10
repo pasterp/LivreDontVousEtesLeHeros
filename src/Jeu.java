@@ -11,40 +11,7 @@ import java.util.Scanner;
  */
 public class Jeu {
 
-	public static boolean sauvegarderJeu(String sauvegardeName, Page page_actuelle, Personnage heros){
-		String sauvegardePath = "saves/"+sauvegardeName+".save";
-		FileOutputStream save;
-		try {
-			save = new FileOutputStream(sauvegardePath);
-			ObjectOutputStream oos = new ObjectOutputStream(save);
-			//oos.writeObject(page_actuelle);
-//			oos.writeObject(heros);
-			oos.close();
-			save.close();
-			return true;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false;
-		}
-	}
 	
-	public static boolean chargerJeu(String sauvegardeName, Page page_actuelle, Personnage heros){
-		String sauvegardePath = "saves/"+sauvegardeName+".save";
-		FileInputStream save;
-		try {
-			save = new FileInputStream(sauvegardePath);
-			ObjectInputStream ois = new ObjectInputStream(save);
-			//page_actuelle = (Page)ois.readObject();
-//			heros = (Personnage)ois.readObject();
-			ois.close();
-			save.close();
-			return true;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false;
-		}
-
-	}
 	
 	/**
 	 * @param args
@@ -86,25 +53,25 @@ public class Jeu {
 								}
 								break;
 								
-							case "/save":
-								System.out.print("Entrez le nom de votre sauvegarde : ");
-								if(sauvegarderJeu(sc.next(), page_actuelle, notreHeros)){
-									System.out.println("Sauvegarde réussie !");
-								}
-								else {
-									System.out.println("Echec de la sauvegarde !");
-								}
-								break;
-								
-							case "/load":
-								System.out.print("Entrez le nom de votre sauvegarde : ");
-								if(chargerJeu(sc.next(), page_actuelle, notreHeros)){
-									System.out.println("Chargement réussi !");
-								}
-								else{
-									System.out.println("Chargement échoué");
-								}
-								break;
+//							case "/save":
+//								System.out.print("Entrez le nom de votre sauvegarde : ");
+//								if(sauvegarderJeu(sc.next(), page_actuelle, notreHeros)){
+//									System.out.println("Sauvegarde réussie !");
+//								}
+//								else {
+//									System.out.println("Echec de la sauvegarde !");
+//								}
+//								break;
+//								
+//							case "/load":
+//								System.out.print("Entrez le nom de votre sauvegarde : ");
+//								if(chargerJeu(sc.next(), page_actuelle, notreHeros)){
+//									System.out.println("Chargement réussi !");
+//								}
+//								else{
+//									System.out.println("Chargement échoué");
+//								}
+//								break;
 						//TODO : Commandes
 						}
 						entreeEntiere = -666;

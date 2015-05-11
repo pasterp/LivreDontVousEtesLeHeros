@@ -85,16 +85,16 @@ public class Creature {
 	}
 	
 	public int calculPuissance() {
-		int puissance=1;
+		double puissance=1;
 		De dé = new De();
 
-		puissance = (int)(this.getStat("FOR")+(double)this.getStat("DEX")/2.0) + dé.roll();
+		puissance = (this.getStat("FOR")+(double)this.getStat("DEX")/2.0) + dé.roll();
 		
-		if (1+(int)(Math.random()*99) > this.getStat("LCK")){
+		if ((Math.random()*100) > 100-this.getStat("LCK")){
 			System.out.println("*Coup critique*");
-			puissance *= dé.roll();
+			puissance *= (dé.roll()+this.getStat("DEX"))/10.0;
 		}
-		return puissance;
+		return (int)puissance;
 	}
 	
 	public int infligerDegats(Creature cible){

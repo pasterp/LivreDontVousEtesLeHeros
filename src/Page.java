@@ -16,7 +16,7 @@ public class Page {
 	List<Element> choixPage;
 	Personnage heros;
 	List<Integer> liste_choix = new ArrayList<Integer>();
-	
+	List<Element> eventsPage;
 
 	/**
 	 * @Page : L'élement Page extrait du xml qui contient les infos de la page actuelle
@@ -32,11 +32,19 @@ public class Page {
 			descriptionPage = page.getChild("description_page").getText();
 		} catch (DataConversionException e) {e.printStackTrace();}
 		choixPage = page.getChildren("choix");
+		eventsPage = page.getChildren("event");
 	}
 	
 	public void afficherPage(){
 		System.out.println("Page "+ numeroPage + " : " + titrePage);
 		System.out.println(descriptionPage);
+	}
+	
+	public void readEvents(){
+		//TODO : parcourir les events (ajouter/enlever un objet, lancer un combat etc...)_
+		for(Element event : eventsPage){
+			System.out.println(event.getText());
+		}
 	}
 	
 	public int listerChoix() {
@@ -67,7 +75,7 @@ public class Page {
 	
 	public Element testerConditionSuite(Element choix){
 		try {
-			if (choix.getChild("condition") != null && heros.getStat(choix.getChild("condition").getAttributeValue("attribut")) >= choix.getChild("condition").getAttribute("niveau").getIntValue()){
+			if (choix.getChild("condition") != null && (int)heros.getStat(choix.getChild("condition").getAttributeValue("attribut")) >= choix.getChild("condition").getAttribute("niveau").getIntValue()){
 				return testerConditionSuite(choix.getChild("condition"));
 			}
 			else {

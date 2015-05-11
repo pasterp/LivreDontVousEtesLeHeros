@@ -7,7 +7,7 @@ La première a un ange griffoné sur la poignée, la seconde n'a rien de distinc
 	<event type="modifier" stat="FOR" value="0.3">Un éclair de lumière divine vous élumine et vous sentez une énergie nouvelle vous parcourir</event>
 	<choix id_choix="1">
 		<description_choix>Prendre la porte avec l'ange gravé sur la poignée</description_choix>
-		<page_suivante><condition niveau="8" attribut="INT" texte_reussite="Votre coup d'oeil vous permet de voir que l'ange pointe l'autre porte, vous changez donc d'avis."><condition niveau="8" attribut="FOR">2</condition>2</condition>3</page_suivante></choix>
+		<page_suivante><condition niveau="8" attribut="INT" texte_reussite="Votre coup d'oeil vous permet de voir que l'ange pointe l'autre porte, vous changez donc d'avis."><condition niveau="8" attribut="FOR" texte_reussite="Votre force parvient à retenir la porte lorsque des tentacules en jaillissent pour vous attirer à l'intérieur, vous prenez rapidement l'autre porte.">2</condition>2</condition>3</page_suivante></choix>
 			
 	<choix id_choix="2">
 		<description_choix>Prendre la porte banale</description_choix>

@@ -26,6 +26,7 @@ public class Jeu {
 		do {
 			page_actuelle = new Page(livre.ouvrirALaPage(page_suivante), notreHeros);
 			page_actuelle.afficherPage();
+			page_actuelle.readEvents();
 			if (page_actuelle.listerChoix() > 0){
 				do{
 					System.out.print("Quel est votre choix ? ");
@@ -35,7 +36,7 @@ public class Jeu {
 							case "/status":
 							case "/stat":
 							case "/s":
-								//TODO : statut du personnage (hp, effet, att/def )
+								notreHeros.descriptif_DEBUG();
 								break;
 								
 							case "/me":

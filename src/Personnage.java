@@ -1,5 +1,3 @@
-import java.util.Map;
-
 /**
  * 
  */
@@ -10,7 +8,6 @@ import java.util.Map;
  */
 public class Personnage extends Creature {
 	String bioPersonnage;
-	Map<String, Integer> statsPersonnage;
 	/**
 	 * 
 	 */

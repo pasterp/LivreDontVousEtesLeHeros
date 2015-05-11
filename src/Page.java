@@ -44,6 +44,18 @@ public class Page {
 		//TODO : parcourir les events (ajouter/enlever un objet, lancer un combat etc...)_
 		for(Element event : eventsPage){
 			System.out.println(event.getText());
+			switch(event.getAttribute("type").getValue()){
+				case "combat":
+					System.out.println("Début d'un combat !");
+					Element adv = event.getChild("adversaire");
+					String[] statsNames = {"HP", "FOR", "INT", "DEX", "LCK"};
+					for(String stat : statsNames){
+						//TODO : REIHTJIHOJZRHOETJHOTEDKHGOE
+					}
+					Adversaire adversaire = new Adversaire(adv.getAttributeValue("nom"), adv.getText(), Integer.valueOf(adv.getAttributeValue("hp")), 5, 5, 5, 5);
+					adversaire.descriptif_DEBUG();
+					break;
+			}
 		}
 	}
 	

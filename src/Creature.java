@@ -56,6 +56,7 @@ public class Creature {
 		if (this.isAlive()){
 			return true;
 		}else {
+			this.stats.replace("HP", 0);
 			return false;
 		}
 	}
@@ -84,8 +85,16 @@ public class Creature {
 	}
 	
 	public int calculPuissance() {
-		//Use FOR DEX LUCK
-		return 1;
+		int puissance=1;
+		De dé = new De();
+
+		puissance = (int)(this.getStat("FOR")+(double)this.getStat("DEX")/2.0) + dé.roll();
+		
+		if (1+(int)(Math.random()*99) > this.getStat("LCK")){
+			System.out.println("*Coup critique*");
+			puissance *= dé.roll();
+		}
+		return puissance;
 	}
 	
 	public int infligerDegats(Creature cible){
@@ -93,7 +102,7 @@ public class Creature {
 	}
 	
 	public int recevoirDegats(int nb_degats){
-		nb_degats*= (1/(this.getStat("RES")));
+		nb_degats = (int)((double)nb_degats*(1/(this.getStat("RES"))));
 		this.addHP(-nb_degats);
 		return nb_degats;
 	}

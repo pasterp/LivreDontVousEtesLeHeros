@@ -20,7 +20,8 @@ public class Jeu {
 		int page_suivante=1, entreeEntiere=0;
 		Scanner sc = new Scanner(System.in);
 		Page page_actuelle;
-		Personnage notreHeros = new Personnage("Notre Heros");
+		System.out.print("Quel est votre nom ? \n");
+		Personnage notreHeros = new Personnage(sc.nextLine());
 		String fichier="testing.xml", entree="";
 		Lecteur livre = new Lecteur(fichier);
 		do {
@@ -41,7 +42,7 @@ public class Jeu {
 								
 							case "/me":
 								//TODO : Descriptif du perso (nom, bio et stat)
-								System.out.println(notreHeros.calculPuissance());
+								notreHeros.fichePersonnage();
 								break;
 								
 							case "/pause":

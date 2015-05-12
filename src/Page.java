@@ -93,7 +93,7 @@ public class Page {
 	}
 	
 	public Element testerConditionSuite(Element choix){
-		try {
+		try { //TODO : update for item :O
 			if (choix.getChild("condition") != null && (int)heros.getStat(choix.getChild("condition").getAttributeValue("attribut")) >= choix.getChild("condition").getAttribute("niveau").getIntValue()){
 				return testerConditionSuite(choix.getChild("condition"));
 			}

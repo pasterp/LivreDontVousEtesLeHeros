@@ -15,8 +15,11 @@ La première a un ange griffoné sur la poignée, la seconde n'a rien de distinc
 			
 	<page numero_page="2">
 	<titre>Victoire</titre>
-	<description_page>Vous avez fini mon jeu, bravo ! :)</description_page></page>
-			
+	<description_page>Vous avez fini mon jeu, bravo ! :)</description_page>
+	<choix id_choix="42"><description_choix>Cool g gagney</description_choix>
+	<page_suivante>3</page_suivante></choix>
+	</page>
+	
 	<page numero_page="3">
 	<titre>Perdu</titre>
 	<description_page>Vous êtes mort d'une longue agonie... Dezdez :(</description_page></page>

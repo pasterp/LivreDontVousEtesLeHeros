@@ -41,6 +41,7 @@ public class Jeu {
 								
 							case "/me":
 								//TODO : Descriptif du perso (nom, bio et stat)
+								System.out.println(notreHeros.calculPuissance());
 								break;
 								
 							case "/pause":

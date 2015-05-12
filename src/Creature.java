@@ -40,7 +40,6 @@ public class Creature {
 	}
 	
 	public void defStats(int INT, int FOR, int DEX, int LCK){
-		System.out.println(""+INT+" "+FOR+" "+DEX+" "+LCK);
 		this.stats.replace("INT", INT); // Magical Damage and magical resistance / solving in-game puzzle
 		this.stats.replace("FOR", FOR); // Physical damage / Brutal method to progress in the story (at the cost of hp)
 		this.stats.replace("DEX", DEX); // First round in combat, miss rate and critical bonus damage

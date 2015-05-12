@@ -7,7 +7,6 @@
  *
  */
 public class Adversaire extends Creature{
-	int maxHP;
 	/**
 	 * 
 	 */

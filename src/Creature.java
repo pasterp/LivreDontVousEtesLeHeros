@@ -18,6 +18,7 @@ public class Creature {
 	String m_descriptif;
 	Map<String, Integer> stats;
 	Map<String, Double> effectsOnStats;
+	int maxHP;
 	
 	public Creature(){
 		stats = new HashMap<String, Integer>();
@@ -79,7 +80,7 @@ public class Creature {
 	public void descriptif_DEBUG(){
 		String[] statsNames = {"HP", "FOR", "INT", "DEX", "LCK"};
 		for(String statName : statsNames){
-			System.out.println(statName + " : " + this.getStat(statName));
+			System.out.println("|> "+statName + " -> " + this.getStat(statName));
 		}
 	}
 	

@@ -8,6 +8,7 @@
  */
 public class Personnage extends Creature {
 	String bioPersonnage;
+	
 	/**
 	 * 
 	 */
@@ -21,6 +22,12 @@ public class Personnage extends Creature {
 	
 	public void fichePersonnage(){
 		//TODO : affiche la fiche du personnage (résumé des caractéristiques, etc...)
+		System.out.println("____________________________________________\n"
+						 + "|> "+m_nom+"\n"
+						 + "|\n"
+						 + "| "+bioPersonnage+
+						 "\n| ");
+						this.descriptif_DEBUG();
 	}
 
 }

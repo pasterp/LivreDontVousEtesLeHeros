@@ -43,17 +43,24 @@ public class Page {
 	public void readEvents(){
 		//TODO : parcourir les events (ajouter/enlever un objet, lancer un combat etc...)_
 		for(Element event : eventsPage){
-			System.out.println(event.getText());
 			switch(event.getAttribute("type").getValue()){
 				case "combat":
 					System.out.println("Début d'un combat !");
 					Element adv = event.getChild("adversaire");
-					String[] statsNames = {"HP", "FOR", "INT", "DEX", "LCK"};
+					String[] statsNames = {"hp", "for", "int", "dex", "lck"};
+					Integer[] stats={0,0,0,0,0};
+					int i=0;
 					for(String stat : statsNames){
-						//TODO : REIHTJIHOJZRHOETJHOTEDKHGOE
+						if (adv.getAttribute(stat) != null){
+							stats[i] += Integer.valueOf(adv.getAttributeValue(stat));
+						}else{
+							stats[i] += new De().roll();
+						}
+						i++;
 					}
-					Adversaire adversaire = new Adversaire(adv.getAttributeValue("nom"), adv.getText(), Integer.valueOf(adv.getAttributeValue("hp")), 5, 5, 5, 5);
-					adversaire.descriptif_DEBUG();
+					Adversaire adversaire = new Adversaire(adv.getAttributeValue("nom"), adv.getText(), stats[0], stats[1], stats[2], stats[3], stats[4]);
+					Combat combat = new Combat(heros, adversaire);
+					combat.debutCombat();
 					break;
 			}
 		}

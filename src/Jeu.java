@@ -45,6 +45,15 @@ public class Jeu {
 								notreHeros.fichePersonnage();
 								break;
 								
+							case "/inventaire":
+							case "/i":
+								notreHeros.inventaire();
+								break;
+								
+							case "/equipement":
+								notreHeros.equipement();
+								break;
+								
 							case "/pause":
 								System.out.println("Prenez une pause, je vous attends...");
 								System.out.print("==PAUSE==");

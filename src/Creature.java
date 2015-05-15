@@ -23,6 +23,7 @@ public class Creature {
 	public Creature(){
 		stats = new HashMap<String, Integer>();
 		stats.put("HP", 100);
+		maxHP=100;
 		effectsOnStats = new HashMap<String, Double>();
 		initStats();
 	}
@@ -50,9 +51,15 @@ public class Creature {
 	public int getHP(){
 		return stats.get("HP");
 	}
+	public int getHPmax(){
+		return maxHP;
+	}
 	
 	public boolean addHP(int hp){
 		this.stats.replace("HP", this.getHP()+hp);
+		if (this.getHP() > this.getHPmax()){
+			this.stats.replace("HP", this.getHPmax());
+		}
 		if (this.isAlive()){
 			return true;
 		}else {
@@ -88,7 +95,7 @@ public class Creature {
 		double puissance=1;
 		De dé = new De();
 
-		puissance = (this.getStat("FOR")+(double)this.getStat("DEX")/2.0) + dé.roll();
+		puissance = (this.getStat("FOR")+(double)this.getStat("DEX")/2.0) + (double)dé.roll();
 		
 		if ((Math.random()*100) > 100-this.getStat("LCK")){
 			System.out.println("*Coup critique*");
@@ -102,8 +109,12 @@ public class Creature {
 	}
 	
 	public int recevoirDegats(int nb_degats){
-		nb_degats = (int)((double)nb_degats*(1/(this.getStat("RES"))));
+		nb_degats = (int)((double)nb_degats*(1.0/(this.getStat("RES"))));
 		this.addHP(-nb_degats);
 		return nb_degats;
+	}
+	
+	public void afficher(){
+		System.out.println(""+this.m_nom+" : "+this.getHP()+"/"+this.getHPmax()+"PV");
 	}
 }

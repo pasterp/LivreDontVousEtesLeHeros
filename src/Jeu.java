@@ -19,10 +19,12 @@ public class Jeu {
 	public static void main(String[] args) {
 		int page_suivante=1, entreeEntiere=0;
 		Scanner sc = new Scanner(System.in);
+		String fichier="testing.xml", entree="";
 		Page page_actuelle;
+		System.out.println("Quelle histoire voulez vous lire ? (par défaut tapez \"testing.xml\")");
+		fichier = sc.next();
 		System.out.print("Quel est votre nom ? \n");
 		Personnage notreHeros = new Personnage(sc.nextLine());
-		String fichier="testing.xml", entree="";
 		Lecteur livre = new Lecteur(fichier);
 		do {
 			page_actuelle = new Page(livre.ouvrirALaPage(page_suivante), notreHeros);

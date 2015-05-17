@@ -23,6 +23,7 @@ public class Jeu {
 		Page page_actuelle;
 		System.out.println("Quelle histoire voulez vous lire ? (par défaut tapez \"testing.xml\")");
 		fichier = sc.next();
+		sc.nextLine();
 		System.out.print("Quel est votre nom ? \n");
 		Personnage notreHeros = new Personnage(sc.nextLine());
 		Lecteur livre = new Lecteur(fichier);

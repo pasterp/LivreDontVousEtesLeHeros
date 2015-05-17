@@ -25,7 +25,7 @@ public class Personnage extends Creature {
 	
 	public void fichePersonnage(){
 		//TODO : affiche la fiche du personnage (résumé des caractéristiques, etc...)
-		System.out.println("____________________________________________\n"
+		System.out.println("___________________________________________________\n"
 						 + "|> "+m_nom+"\n"
 						 + "|\n"
 						 + "| "+bioPersonnage+

@@ -36,8 +36,11 @@ public class Page {
 	}
 	
 	public void afficherPage(){
+		System.out.println("\n___________________________________________________");
 		System.out.println("Page "+ numeroPage + " : " + titrePage);
-		System.out.println(descriptionPage);
+		System.out.println("___________________________________________________");
+		System.out.println("|> "+descriptionPage.replace("\n", "\n|> "));
+		System.out.println("___________________________________________________");
 	}
 	
 	public void readEvents(){

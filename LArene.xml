@@ -1,0 +1,153 @@
+<aventure>
+	<page numero_page="1">
+		<titre>Bienvenue dans l'arène</titre>
+		<description_page>Courte histoire de démonstration du moteur d'aventure dont vous êtes le héros.
+By Pascal PHELIPOT.
+Cette courte histoire va vous plonger dans l'ambiance d'une arène romaine et vous faire décoouvrir des combats palpitants ! Survivrez vous ?</description_page>
+		<choix id_choix="1">
+			<description_choix>"C'est parti !"</description_choix>
+			<page_suivante>2</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="2">
+		<titre>Sombre cellule</titre>
+		<description_page>Vous vous réveillez dans un cachot sombre humide et chaud. Les murs sont sales et le mobilier sommaire est usé. Votre corps endolori semble avoir souffert de quelques coups. Vous ne parvenez pas à vous souvenir de qui vous êtes. 
+Vous vous mettez difficilement en position assise sur le banc qui vous servait de lit. Peut être devrier vous chercher des indices sur vous.</description_page>
+		<choix id_choix="1">
+			<description_choix>Chercher dans la cellule des indices à propos de vous</description_choix>
+			<page_suivante>3</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Allez observer le couloir derrière la grille de votre cellule</description_choix>
+			<page_suivante>5</page_suivante>
+		</choix>
+		<choix id_choix="3">
+			<description_choix>Tourner en rond dans votre cellule</description_choix>
+			<page_suivante>4</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="4">
+		<titre>Sombre cellule</titre>
+		<description_page>Tourner en rond ne vous a rien apporter si ce n'est quelques douleurs supplémentaires au jambes... Il va vous falloir songer à faire autre chose.
+Des cris semblent provenir du couloir.</description_page>
+		<choix id_choix="1">
+			<description_choix>Chercher dans la cellule des indices à propos de vous</description_choix>
+			<page_suivante>3</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Allez observer le couloir derrière la grille de votre cellule</description_choix>
+			<page_suivante>5</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="3">
+		<titre>Sombre cellule</titre>
+		<description_page>Vos recherches sont vaines : à part certains textes gravés grossiérement sur les murs, impossible de trouver quelque chose à votre propos. Vous êtes déçu. 
+Des cris dans le couloir vous intriguent.</description_page>
+		<choix id_choix="1">
+			<description_choix>Allez observer le couloir derrière la grille de votre cellule</description_choix>
+			<page_suivante>5</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="5">
+		<titre>Porte de votre cellule</titre>
+		<description_page>Un homme à la forte musculature cogne d'un brutal coup sur les barreaux de votre cellule. Vous reculez surpris par cette brutale intervention. Il vous observe au travers de la grille et vous lance d'une voix rauque :
+"Et toi tu m'as bien l'air en forme aujourd'hui !! Je pense que tu as envie de gagner ta liberté maintenant ! Il manque un combattant pour le prochain affrontement, c'est bien ta chance !"
+
+Il ouvre la porte et vous saisit fermement, il vous traine dans le couloir...</description_page>
+		<choix id_choix="1">
+			<description_choix>Tenter de se débattre pour échapper à son emprise.</description_choix>
+			<page_suivante>6</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Se résigner à le laisser nous emmener où bon lui semble.</description_choix>
+			<page_suivante>6</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="6">
+		<titre>Entrée de l'arène</titre>
+		<description_page>La force du geolier vous a emporté devant les grilles de l'arène avec une extrème facilité. Vous pensez soudain que vous ne ferez pas le point dans un combat contre un adversaire aussi musclé que lui...
+Vous vous sentez mal...</description_page>
+		<choix id_choix="1">
+			<description_choix>Tenter de reprendre ses esprits</description_choix>
+			<page_suivante>7</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Observer l'arène au travers de la grille</description_choix>
+			<page_suivante>7</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="7">
+		<titre>L'arène</titre>
+		<description_page>Le geolier vous pousse sans ménagement contre les grilles, il vous explique rapidement que vous devez vous battre pour votre vie contre de nombreux adversaires. Il vous souhaite bon courage en éclatant d'un rire inquiétant !
+
+Vous tombez à genoux sur le sable de l'arène, vous êtes ébloui...</description_page>
+		<choix id_choix="1">
+			<description_choix>Reprendre ses esprits</description_choix>
+			<page_suivante>8</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Vous relevez de suite</description_choix>
+			<page_suivante>9</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="8">
+		<titre>Dur entrée en matière</titre>
+		<description_page>Vous n'avez pas le temps de reprendre vos esprits que le pied d'un combattant vient vous briser une côte.</description_page>
+		<event type="combat"><adversaire hp="30" for="5" dex="15" nom="Combattant désarmé">Vous vous redressez pour l'affronter !</adversaire></event>
+		<choix id_choix="1">
+			<description_choix>Regarder autour de vous</description_choix>
+			<page_suivante>10</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="9">
+		<titre>Premier affrontement</titre>
+		<description_page></description_page>
+		<event type="combat"><adversaire hp="30" for="5" dex="3" nom="Combattant désarmé">Vous vous préparer pour l'affronter !</adversaire></event>
+		<choix id_choix="1">
+			<description_choix>Regarder autour de vous</description_choix>
+			<page_suivante>10</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="10">
+		<titre>Arène</titre>
+		<description_page>Vous observez les nombreux duel qui ont lieu sur l'arène... Vous ne savez pas quoi faire... Mais vous ne pouvez rester là, il faut se décider !</description_page>
+		<choix id_choix="1">
+			<description_choix>Vous diriger vers un adversaire pataud</description_choix>
+			<page_suivante>11</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Vous diriger vers un adversaire confiant</description_choix>
+			<page_suivante>12</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="11">
+		<titre>Combat n°2</titre>
+		<description_page>Vous engagez le combat avec toute votre confiance, vous espérez ne pas avoir de mauvaise surprise !</description_page>
+		<event type="combat"><adversaire hp="50" for="3" dex="3" nom="Combattant perdu">Vous vous préparer pour l'affronter !</adversaire></event>
+		<choix id_choix="1">
+			<description_choix>Suite</description_choix>
+			<page_suivante>13</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="12">
+		<titre>Combat n°2</titre>
+		<description_page>Vous engagez le combat avec toute votre confiance mais au fond de vous savez que cela va être difficile...</description_page>
+		<event type="combat"><adversaire hp="150" for="8" dex="5" nom="Combattant badass">Vous vous préparer pour l'affronter !</adversaire></event>
+		<choix id_choix="1">
+			<description_choix>Suite</description_choix>
+			<page_suivante>13</page_suivante>
+		</choix>
+	</page>
+	<page numero_page="13">
+		<titre>La Fin</titre>
+		<description_page>Vous semblez lasse de ces combats, vous vous réveillez dans votre lit en émmergeant de ce cauchemar ! Vous êtes soulagé d'en être sorti !</description_page>
+		<choix id_choix="1">
+			<description_choix>------- FIN -------</description_choix>
+			<page_suivante>13</page_suivante>
+		</choix>
+		<choix id_choix="2">
+			<description_choix>Merci d'avoir jouer</description_choix>
+			<page_suivante>13</page_suivante>
+		</choix>
+	</page>
+</aventure>

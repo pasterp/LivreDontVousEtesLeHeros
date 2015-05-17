@@ -67,7 +67,10 @@ public class Jeu {
 									e.printStackTrace();
 								}
 								break;
-								
+							case "/repeter":
+								page_actuelle.afficherPage();
+								page_actuelle.readEvents();
+								break;
 //							case "/save":
 //								System.out.print("Entrez le nom de votre sauvegarde : ");
 //								if(sauvegarderJeu(sc.next(), page_actuelle, notreHeros)){

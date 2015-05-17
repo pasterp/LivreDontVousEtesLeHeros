@@ -13,7 +13,7 @@ import java.util.Map;
  * @author Pascal
  *
  */
-public class Creature {
+public abstract class Creature {
 	String m_nom;
 	String m_descriptif;
 	Map<String, Integer> stats;
